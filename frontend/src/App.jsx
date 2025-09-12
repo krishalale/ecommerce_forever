@@ -12,7 +12,7 @@ import Order from './pages/Order.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import SearchBar from './components/SearchBar.jsx'
-
+ import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -20,6 +20,7 @@ import SearchBar from './components/SearchBar.jsx'
 const App = () => {
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+      <ToastContainer />
       <Navbar />
       <SearchBar />
       <Routes>
