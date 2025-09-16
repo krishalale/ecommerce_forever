@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { assets } from '../assets/assets.js'
 import { NavLink, Link } from 'react-router-dom'
-import { ShopContext } from '../context/shopContext';
+import { ShopContext } from '../context/ShopContext';
 
 
 const Navbar = () => {
@@ -42,7 +42,8 @@ const Navbar = () => {
         <img src={assets.search_icon} alt="Search" className='w-5 cursor-pointer' onClick={(()=>setShowSearch(true))} />
 
         <div className='group relative'>
-          <img src={assets.profile_icon} alt="Profile" className='w-5 cursor-pointer' />
+          <Link to='/login'>
+          <img src={assets.profile_icon} alt="Profile" className='w-5 cursor-pointer' /></Link>
 
           <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
             <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
