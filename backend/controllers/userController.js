@@ -28,7 +28,7 @@ const loginUser = async (req,res) => {
 
     }
     else{
-      res.json({success:false,message:"Invalid Credentials"})
+      res.json({success:false,message:"Invalid Email/Password"})
     }
   }catch(error){
     console.log(error)
@@ -89,7 +89,7 @@ const adminLogin = async (req,res) => {
     const token = jwt.sign(email+password,process.env.JWT_SECRET);
     res.json({success:true,token})
   }else{
-    res.json({success:false,message:"Invalid ID/Password"})
+    res.json({success:false,message:"Invalid Email/Password"})
   }
 
   try{
